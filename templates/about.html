@@ -133,18 +133,19 @@
               </div>
 
               <!-- What -->
+              
               <div class="mt-1">
                 <h2 class="title title--h3">کاری که انجام می دهم</h2>
                 <div class="row">
+                  {% for item in whattodo %}
                   <!-- Case Item -->
                   <div class="col-12 col-lg-6">
                     <div class="case-item">
                       <img
                         class="case-item__icon"
-                        src="{% static 'icons/icon-design.svg' %}"
+                        src="{{item.img.url}}"
                         alt=""
                       />
-                    {% for item in {{whattodo}} %}
                       <div>
                         <h3 class="title title--h4">{{item.title}}</h3>
                         <p class="case-item__caption">
@@ -153,27 +154,11 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- Case Item -->
-                  <div class="col-12 col-lg-6">
-                    <div class="case-item">
-                      <img
-                        class="case-item__icon"
-                        src="{% static 'icons/icon-dev.svg' %}"
-                        alt=""
-                      />
-                      <div>
-                        <h3 class="title title--h4">توسعه وب</h3>
-                        <p class="case-item__caption">
-                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                          چاپ و با استفاده از طراحان گرافیک است
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
+                  {% endfor %}  
                 </div>
               </div>
+              
+
 
               <!-- Testimonials -->
               <div class="mt-2">
@@ -258,59 +243,6 @@
                           آن افتخار کنیم
                         </p>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-
-              <!-- Clients -->
-              <div class="mt-4">
-                <h2 class="title title--h3">مشتری ها</h2>
-
-                <div class="swiper-container js-carousel-clients">
-                  <div class="swiper-wrapper">
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-1.svg' %}" alt="Logo"
-                      /></a>
-                    </div>
-
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-2.svg' %}" alt="Logo"
-                      /></a>
-                    </div>
-
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-3.svg' %}" alt="Logo"
-                      /></a>
-                    </div>
-
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-4.svg' %}" alt="Logo"
-                      /></a>
-                    </div>
-
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-1.svg' %}" alt="Logo"
-                      /></a>
-                    </div>
-
-                    <!-- Item client -->
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="{% static 'img/logo-2.svg' %}" alt="Logo"
-                      /></a>
                     </div>
                   </div>
 

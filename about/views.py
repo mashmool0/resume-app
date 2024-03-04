@@ -5,7 +5,7 @@ from .models import HeaderInfo,WhatToDo,AboutMe
 
 def about(request) : 
     info = HeaderInfo.objects.last()
-    whattodo = WhatToDo.objects.last()
+    whattodo = WhatToDo.objects.all()
     aboutme = AboutMe.objects.last()
     return render(request,'about.html',{"info":info,"whattodo":whattodo,"aboutme":aboutme})
 

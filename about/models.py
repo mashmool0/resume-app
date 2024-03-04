@@ -24,5 +24,8 @@ class AboutMe(models.Model):
 class WhatToDo(models.Model):
     title = models.CharField(max_length=30)
     description = models.CharField(max_length=200)
+    img = models.ImageField(upload_to='media',default=True)
+
     
-    
+    def __str__(self) -> str:
+        return self.title
