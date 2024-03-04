@@ -1,14 +1,20 @@
 from django.shortcuts import render
-from .models import HeaderInfo,WhatToDo,AboutMe 
+from .models import HeaderInfo, WhatToDo, AboutMe, Comments
 # Create your views here.
 
 
-def about(request) : 
+def about(request):
     info = HeaderInfo.objects.last()
     whattodo = WhatToDo.objects.all()
     aboutme = AboutMe.objects.last()
-    return render(request,'about.html',{"info":info,"whattodo":whattodo,"aboutme":aboutme})
+    comment = Comments.objects.count()
+    if comment != 0:
+        comment = Comments.objects.all()
+    
+    
+    return render(request, 'about.html', {"info": info, "whattodo": whattodo, "aboutme": aboutme, "comment": comment})
 
-def resume(request) : 
-    info = HeaderInfo.objects.last() 
-    return render(request,'resume.html',{"info":info})
+
+def resume(request):
+    info = HeaderInfo.objects.last()
+    return render(request, 'resume.html', {"info": info})

@@ -166,84 +166,34 @@
                 <div class="swiper-container js-carousel-review">
                   <div class="swiper-wrapper">
                     <!-- Item review -->
+                    {% if comment != 0  %}
+                    {% for item in comment %}
                     <div class="swiper-slide review-item">
                       <svg class="avatar avatar--80" viewBox="0 0 84 84">
                         <g class="avatar__hexagon">
                           <image
-                            xlink:href="{% static 'img/avatar-2.jpg' %}"
+                            xlink:href="{{item.profile.url}}"
                             height="100%"
                             width="100%"
                           />
                         </g>
                       </svg>
                       <div class="review-item__textbox">
-                        <h4 class="title title--h5">علی نیازی</h4>
+                        <h4 class="title title--h5">{{item.name}}</h4>
                         <p class="review-item__caption">
-                          فلسیا برای ایجاد هویت شرکتی استخدام شد. ما از کار
-                          انجام شده بسیار راضی بودیم.
+                          {{item.text}}
                         </p>
                       </div>
                     </div>
-
-                    <!-- Item review -->
-                    <div class="swiper-slide review-item">
-                      <svg class="avatar avatar--80" viewBox="0 0 84 84">
-                        <g class="avatar__hexagon">
-                          <image
-                            xlink:href="{% static 'img/avatar-3.jpg' %}"
-                            height="100%"
-                            width="100%"
-                          />
-                        </g>
-                      </svg>
+                    {% endfor %}
+                    {% else %}
                       <div class="review-item__textbox">
-                        <h4 class="title title--h5">ملیکا خلیلیان</h4>
                         <p class="review-item__caption">
-                          با تشکر از مهارت فلسیا ما طراحی داریم که می توانیم به
-                          آن افتخار کنیم
+                          فعلا هیچ نظری وجود نداره :) 
                         </p>
                       </div>
                     </div>
-
-                    <!-- Item review -->
-                    <div class="swiper-slide review-item">
-                      <svg class="avatar avatar--80" viewBox="0 0 84 84">
-                        <g class="avatar__hexagon">
-                          <image
-                            xlink:href="{% static 'img/avatar-4.jpg' %}"
-                            height="100%"
-                            width="100%"
-                          />
-                        </g>
-                      </svg>
-                      <div class="review-item__textbox">
-                        <h4 class="title title--h5">ملیکا خلیلیان</h4>
-                        <p class="review-item__caption">
-                          فلسیا برای ایجاد هویت شرکتی استخدام شد. ما از کار
-                          انجام شده بسیار راضی بودیم
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Item review -->
-                    <div class="swiper-slide review-item">
-                      <svg class="avatar avatar--80" viewBox="0 0 84 84">
-                        <g class="avatar__hexagon">
-                          <image
-                            xlink:href="{% static 'img/avatar-5.jpg' %}"
-                            height="100%"
-                            width="100%"
-                          />
-                        </g>
-                      </svg>
-                      <div class="review-item__textbox">
-                        <h4 class="title title--h5">علی نیازی</h4>
-                        <p class="review-item__caption">
-                          با تشکر از مهارت فلسیا ما طراحی داریم که می توانیم به
-                          آن افتخار کنیم
-                        </p>
-                      </div>
-                    </div>
+                    {% endif %}
                   </div>
 
                   <div class="swiper-pagination"></div>
@@ -252,7 +202,7 @@
             </div>
 
             <!-- Footer -->
-            <footer class="footer">© 1399 ملیکا خلیلیان</footer>
+            <footer class="footer">© 1402  امیرمهدی مشایخی</footer>
           </div>
         </div>
       </div>
