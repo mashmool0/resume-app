@@ -4,7 +4,7 @@
   <div class="header-image">
     <div
       class="js-parallax"
-      style="background-image: url(assets/img/image_header.jpg)"
+      style="background-image: url({% static '/img/image_header.jpg' %})"
     ></div>
   </div>
 
@@ -41,10 +41,13 @@
           </ul>
         </div>
       </div>
-  
+
       <div class="header__right">
         <ul class="header__contact">
-          <li><span class="overhead">ایمیل</span><a href="mailto:{{info.email}}">{{info.email}}</a></li>
+          <li>
+            <span class="overhead">ایمیل</span
+            ><a href="mailto:{{info.email}}">{{info.email}}</a>
+          </li>
           <li><span class="overhead">تلفن</span>{{info.PhoneNumber}}</li>
         </ul>
         <ul class="header__contact">

@@ -15,6 +15,3 @@ def about(request):
     return render(request, 'about.html', {"info": info, "whattodo": whattodo, "aboutme": aboutme, "comment": comment})
 
 
-def resume(request):
-    info = HeaderInfo.objects.last()
-    return render(request, 'resume.html', {"info": info})

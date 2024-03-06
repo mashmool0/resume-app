@@ -62,7 +62,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="assets/styles/style-rtl-demo.css"
+      href="{% static 'styles/style-rtl-demo.css' %}"
     />
     <link
       rel="stylesheet"
@@ -87,25 +87,22 @@
       </div>
     </div>
 
-		{% comment %} Header info {% endcomment %}
-		{% include "HeaderInfo.html" %}
+    {% include "HeaderInfo.html" %}
         <div class="row sticky-parent">
           <!-- Sidebar nav -->
           <aside class="col-12 col-md-12 col-lg-2">
             <div class="sidebar box sticky-column">
               <ul class="nav">
                 <li class="nav__item">
-                  <a href="http://127.0.0.1:8000"
-                    ><i class="icon-user"></i>درباره ی ما</a
-                  >
+                  <a href="{% url "about" %}"><i class="icon-user"></i>درباره ی ما</a>
                 </li>
                 <li class="nav__item">
-                  <a class="active" href="http://127.0.0.1:8000/resume"
+                  <a class="active" href="{% url "resume" %}"
                     ><i class="icon-file-text"></i>رزومه</a
                   >
                 </li>
                 <li class="nav__item">
-                  <a href="works.html"
+                  <a href ="works.html"
                     ><i class="icon-codesandbox"></i> کارها</a
                   >
                 </li>
@@ -304,7 +301,7 @@
             </div>
 
             <!-- Footer -->
-            <footer class="footer">© 1399 ملیکا خلیلیان</footer>
+            <footer class="footer">© 1402 امیرمهدی مشایخی</footer>
           </div>
         </div>
       </div>
@@ -325,28 +322,6 @@
         />
       </clipPath>
     </svg>
-
-    <!-- Demo Menu -->
-    <div class="btnSlideNav slideOpen"></div>
-    <div class="btnSlideNav slideClose"></div>
-    <div class="slideNav">
-      <ul class="list-unstyled">
-        <li class="slideNav__item rtl-mode">
-          <h4 class="title title--5">صفحات بیشتر</h4>
-          <a href="ltr/about.html">نسخه چپ چین</a>
-        </li>
-        <li class="slideNav__item"><a href="one-page.html">صفحه تکی</a></li>
-        <li class="slideNav__item">
-          <a href="background-2.html">پس زمینه مثلثی</a>
-        </li>
-        <li class="slideNav__item">
-          <a href="works_v2.html">نمونه کارها نسخه 2</a>
-        </li>
-      </ul>
-      <a href="dark/about.html" class="btn btn--dark">نسخه تیره</a>
-    </div>
-    <div class="overlay-slideNav"></div>
-    <!-- Demo Menu -->
 
     <!-- JavaScripts -->
     <script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
