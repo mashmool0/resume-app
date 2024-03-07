@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0^bf^9!(5vo71kq@k729%whq0)blvxcw@sx1#21z7_i%w8n7!c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'contact',
     'blog',
     'work',
     'resume',
@@ -131,5 +132,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # handeling 404
-handler404 = 'mashmool.views.handler404'
-ALLOWED_HOSTS = ['*']
+# handler404 = 'mashmool.views.handler404'
+# ALLOWED_HOSTS = ['*']
