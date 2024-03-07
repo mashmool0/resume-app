@@ -80,18 +80,24 @@
 
 						<!-- News -->
 						<div class="news-grid">
+							{% if blog %}
+							{% for item in blog %}
 							<!-- Post -->
 							<article class="news-item box">
 							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">16<span>فروردین</span></div>
+								    <div class="news-item__date">{{item.day_def}}<span>{{item.month_def}}</span></div>
 									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="{% static 'img/image_02.jpg' %}" alt="" />
+								    <img class="cover lazyload" src="{{item.cover.url}}" alt="" />
 								</div>
 								<div class="news-item__caption">
-								    <h2 class="title title--h4"> </h2>
-									<p></p>
+								    <h2 class="title title--h4">{{item.title}}</h2>
+									<p>{{item.description}}</p>
 								</div>
 							</article>
+							{% endfor %}
+							{% else %}
+							هنوز بلاگی گذاشته نشده :) 
+							{% endif %}
 						</div>
 					</div>
 					
