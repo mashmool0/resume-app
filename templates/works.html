@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -52,49 +53,17 @@
 		</div>
 	</div>
 
-    <main class="main">
-	    <!-- Header Image -->
-		<div class="header-image">
-		    <div class="js-parallax" style="background-image: url(assets/img/image_header.jpg);"></div>
-		</div>
+		{% comment %} Header Info {% endcomment %}
+				{% include "HeaderInfo.html" %}		
 		
-	    <div class="container gutter-top">
-		    <!-- Header -->
-		    <header class="header box">
-			    <div class="header__left">
-				    <div class="header__photo">
-					    <img class="header__photo-img" src="assets/img/main-photo.svg" alt="Ronald Robertson">
-					</div>
-					<div class="header__base-info">
-					    <h4 class="title titl--h4">ملیکا خلیلیان</h4>
-						<div class="status">کارگردان خلاق</div>
-						<ul class="header__social">
-						    <li><a href="https://www.facebook.com/"><i class="font-icon icon-facebook1"></i></a></li>
-						    <li><a href="https://www.twitter.com/"><i class="font-icon icon-twitter1"></i></a></li>
-							<li><a href="https://www.instagram.com/"><i class="font-icon icon-instagram1"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="header__right">
-				    <ul class="header__contact">
-					    <li><span class="overhead">ایمیل</span>Melika.khaliliyan@gmail.com</li>
-						<li><span class="overhead">تلفن</span>09105552211</li>
-					</ul>
-					<ul class="header__contact">
-					    <li><span class="overhead">تولد</span>9 بهمن 1375</li>
-						<li><span class="overhead">مکان تولد</span>شاهرود ایران</li>
-					</ul>
-				</div>
-			</header>
-		        
 			<div class="row sticky-parent">
 			    <!-- Sidebar nav -->
                 <aside class="col-12 col-md-12 col-lg-2">
 				    <div class="sidebar box sticky-column">
 	                    <ul class="nav">
-                            <li class="nav__item"><a href="about.html"><i class="icon-user"></i>درباره ی ما</a></li>
-							<li class="nav__item"><a href="resume.html"><i class="icon-file-text"></i>رزومه</a></li>
-                            <li class="nav__item"><a class="active" href="works.html"><i class="icon-codesandbox"></i> کارها</a></li>
+                            <li class="nav__item"><a href="{% url "about" %}"><i class="icon-user"></i>درباره ی ما</a></li>
+							<li class="nav__item"><a href="{% url "resume" %}"><i class="icon-file-text"></i>رزومه</a></li>
+                            <li class="nav__item"><a class="{% url "work" %}" href="works.html"><i class="icon-codesandbox"></i> کارها</a></li>
                             <li class="nav__item"><a href="blog.html"><i class="icon-book-open"></i>وبلاگ</a></li>
                             <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>تماس با ما</a></li>
                         </ul>
