@@ -77,32 +77,22 @@
 		                    <h1 class="title title--h1 first-title title__separate">نمونه کارها</h1>
 					    </div>
 						
-						<!-- Filter -->
-                        <div class="select">
-			                <span class="placeholder">انتخاب دسته بندی</span>
-			                <ul class="filter">
-			                    <li class="filter__item">دسته بندی</li>
-				                <li class="filter__item active" data-filter="*"><a class="filter__link active" href="#filter">همه</a></li>
-				                <li class="filter__item" data-filter=".category-concept"><a class="filter__link" href="#filter">مفهوم</a></li>
-				                <li class="filter__item" data-filter=".category-design"><a class="filter__link" href="#filter">طراحی</a></li>
-				                <li class="filter__item" data-filter=".category-life"><a class="filter__link" href="#filter">زندگی</a></li>
-			                </ul>
-			                <input type="hidden" name="changemetoo"/>
-		                </div>
 
 						<!-- Gallery -->
 				        <div class="gallery-grid js-grid-row js-filter-container">
 					        <div class="gutter-sizer"></div>
 					        <!-- Item 1 -->
+							{% for item in sample %}
 					        <figure class="gallery-grid__item category-concept">
 						        <div class="gallery-grid__image-wrap">
-                                    <img class="gallery-grid__image cover lazyload" src="{% static 'img/image_01.jpg' %}" data-zoom alt="" />
+                                    <img class="gallery-grid__image cover lazyload" src="{{item.image.url}}" data-zoom alt="" />
 						        </div>
                                 <figcaption class="gallery-grid__caption">
-							        <h4 class="title title--h6 gallery-grid__title">نصف آووکادو</h4>
-							        <span class="gallery-grid__category">مفهوم</span>
+							        <h4 class="title title--h6 gallery-grid__title">{{item.title}}</h4>
+							        <span class="gallery-grid__category"> <a href="	"> {{item.description}}</a>  </span>
 						        </figcaption>
                             </figure>
+							{% endfor %}
 						</div><!-- Gallery End -->
 					</div>
 					
