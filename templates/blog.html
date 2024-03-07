@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -17,27 +18,27 @@
 	<meta name="twitter:site" content="@aliniyazi_">
 	<meta name="twitter:title" content="vCard">
 	<meta name="twitter:description" content="vCard">
-	<meta name="twitter:image" content="assets/images/social.html">
+	<meta name="twitter:image" content="{% static 'images/social.html' %}">
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="Melika Khaliliyan" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="your url website" />
-	<meta property="og:image" content="assets/images/social.html" />
+	<meta property="og:image" content="{% static 'images/social.html' %}" />
 	<meta property="og:description" content="vCard" />
 	<meta property="og:site_name" content="vCard" />
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-touch-icon-57x57.png">
-	<link rel="shortcut icon" href="assets/images/favicons/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="shortcut icon" href="{% static 'images/favicons/favicon.png' %}" type="image/png">
 
 	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="assets/styles/style-rtl-demo.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/styles/style-rtl.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style-rtl-demo.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style-rtl.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'demo/style-demo.css' %}"/>
 
 </head>
 <body>
@@ -52,50 +53,19 @@
 		</div>
 	</div>
 
-    <main class="main">
-	    <!-- Header Image -->
-		<div class="header-image">
-		    <div class="js-parallax" style="background-image: url(assets/img/image_header.jpg);"></div>
-		</div>
-		
-	    <div class="container gutter-top">
-		    <!-- Header -->
-			<header class="header box">
-				<div class="header__left">
-					<div class="header__photo">
-						<img class="header__photo-img" src="assets/img/main-photo.svg" alt="Ronald Robertson">
-					</div>
-					<div class="header__base-info">
-						<h4 class="title titl--h4">ملیکا خلیلیان</h4>
-						<div class="status">کارگردان خلاق</div>
-						<ul class="header__social">
-							<li><a href="https://www.facebook.com/"><i class="font-icon icon-facebook1"></i></a></li>
-							<li><a href="https://www.twitter.com/"><i class="font-icon icon-twitter1"></i></a></li>
-							<li><a href="https://www.instagram.com/"><i class="font-icon icon-instagram1"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="header__right">
-					<ul class="header__contact">
-						<li><span class="overhead">ایمیل</span>Melika.khaliliyan@gmail.com</li>
-						<li><span class="overhead">تلفن</span>09105552211</li>
-					</ul>
-					<ul class="header__contact">
-						<li><span class="overhead">تولد</span>9 بهمن 1375</li>
-						<li><span class="overhead">مکان تولد</span>شاهرود ایران</li>
-					</ul>
-				</div>
-			</header>
-		        
+	{% comment %} Header Info {% endcomment %}
+		        {% include "HeaderInfo.html" %}
+
+
 			<div class="row sticky-parent">
 			    <!-- Sidebar nav -->
                 <aside class="col-12 col-md-12 col-lg-2">
 				    <div class="sidebar box sticky-column">
 	                    <ul class="nav">
-                            <li class="nav__item"><a href="about.html"><i class="icon-user"></i>درباره ی ما</a></li>
-							<li class="nav__item"><a href="resume.html"><i class="icon-file-text"></i>رزومه</a></li>
-                            <li class="nav__item"><a  href="works.html"><i class="icon-codesandbox"></i> کارها</a></li>
-                            <li class="nav__item"><a class="active" href="blog.html"><i class="icon-book-open"></i>وبلاگ</a></li>
+                            <li class="nav__item"><a href="{% url "about" %}"><i class="icon-user"></i>درباره ی ما</a></li>
+							<li class="nav__item"><a href="{% url "resume" %}"><i class="icon-file-text"></i>رزومه</a></li>
+                            <li class="nav__item"><a  href="{% url "work" %}"><i class="icon-codesandbox"></i> کارها</a></li>
+                            <li class="nav__item"><a class="active" href="{% url "blog" %}"><i class="icon-book-open"></i>وبلاگ</a></li>
                             <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>تماس با ما</a></li>
                         </ul>
 					</div>
@@ -115,83 +85,18 @@
 							    <div class="news-item__image-wrap overlay overlay--45">
 								    <div class="news-item__date">16<span>فروردین</span></div>
 									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_02.jpg" alt="" />
+								    <img class="cover lazyload" src="{% static 'img/image_02.jpg' %}" alt="" />
 								</div>
 								<div class="news-item__caption">
-								    <h2 class="title title--h4">کنفرانس طراحی در سال 1399</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-								</div>
-							</article>
-
-							<!-- Post -->
-							<article class="news-item box">
-							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">15<span>فروردین</span></div>
-									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_06.jpg" alt="" />
-								</div>
-								<div class="news-item__caption">
-								    <h2 class="title title--h4">بهترین فونت های هر طراح</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-								</div>
-							</article>
-
-							<!-- Post -->
-							<article class="news-item box">
-							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">14<span>فروردین</span></div>
-									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_08.jpg" alt="" />
-								</div>
-								<div class="news-item__caption">
-								    <h2 class="title title--h4">طراحی دیجست #80</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-								</div>
-							</article>
-							
-							<!-- Post -->
-							<article class="news-item box">
-							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">13<span>فروردین</span></div>
-									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_07.jpg" alt="" />
-								</div>
-								<div class="news-item__caption">
-								    <h2 class="title title--h4">تعامل UI هفته</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-								</div>
-							</article>
-							
-							<!-- Post -->
-							<article class="news-item box">
-							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">12<span>فروردین</span></div>
-									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_05.jpg" alt="" />
-								</div>
-								<div class="news-item__caption">
-								    <h2 class="title title--h4">هنر فراموش شده</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
-								</div>
-							</article>
-							
-							<!-- Post -->
-							<article class="news-item box">
-							    <div class="news-item__image-wrap overlay overlay--45">
-								    <div class="news-item__date">10<span>فروردین</span></div>
-									<a class="news-item__link" href="single-post.html"></a>
-								    <img class="cover lazyload" src="assets/img/image_01.jpg" alt="" />
-								</div>
-								<div class="news-item__caption">
-								    <h2 class="title title--h4">طراحی دیجست #79</h2>
-									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+								    <h2 class="title title--h4"> </h2>
+									<p></p>
 								</div>
 							</article>
 						</div>
 					</div>
 					
 					<!-- Footer -->
-					<footer class="footer">© 1399 ملیکا خلیلیان</footer>
+					<footer class="footer">© 1402 امیرمهدی مشایخی</footer>
 		        </div>
 			</div>
 		</div>	
@@ -208,27 +113,12 @@
              <path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z"/>
         </clipPath>		
     </svg>
-    
-	<!-- Demo Menu -->
-	<div class="btnSlideNav slideOpen"></div>
-    <div class="btnSlideNav slideClose"></div>
-	<div class="slideNav">
-		<ul class="list-unstyled">
-			<li class="slideNav__item rtl-mode"><h4 class="title title--5">صفحات بیشتر</h4> <a href="ltr/about.html">نسخه چپ چین</a></li>
-			<li class="slideNav__item"><a href="one-page.html">صفحه تکی</a></li>
-			<li class="slideNav__item"><a href="background-2.html">پس زمینه مثلثی</a></li>
-			<li class="slideNav__item"><a href="works_v2.html">نمونه کارها نسخه 2</a></li>
-		</ul>
-		<a href="dark/about.html" class="btn btn--dark">نسخه تیره</a>
-	</div>
-	<div class="overlay-slideNav"></div>
-    <!-- Demo Menu -->
 	
 	<!-- JavaScripts -->
-	<script src="assets/js/jquery-3.4.1.min.js"></script>
-	<script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/common.js"></script>
+	<script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static '/js/plugins.min.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
     
-	<script src="assets/demo/plugins-demo.js"></script>
+	<script src="{% static '/demo/plugins-demo.js' %}"></script>
 </body>
 </html>
