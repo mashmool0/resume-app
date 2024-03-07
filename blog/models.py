@@ -1,5 +1,6 @@
 from django.db import models
 import jdatetime
+import random 
 
 
 # Create your models here.
@@ -15,7 +16,7 @@ class Blog_post(models.Model):
     cover = models.ImageField(default='False')
     month_def = models.CharField(max_length=20,default=month) 
     day_def = models.CharField(max_length=20,default=day)
-
+    randomkey = models.CharField(default=random.randint(2000,2100),max_length=5)
     
     def __str__(self) -> str:
         return self.title
