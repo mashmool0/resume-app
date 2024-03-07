@@ -18,27 +18,27 @@
 	<meta name="twitter:site" content="@aliniyazi_">
 	<meta name="twitter:title" content="vCard">
 	<meta name="twitter:description" content="vCard">
-	<meta name="twitter:image" content="assets/images/social.html">
+	<meta name="twitter:image" content="{% static 'images/social.html' %}">
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="Melika Khaliliyan" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="your url website" />
-	<meta property="og:image" content="assets/images/social.html" />
+	<meta property="og:image" content="{% static 'images/social.html' %}" />
 	<meta property="og:description" content="vCard" />
 	<meta property="og:site_name" content="vCard" />
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-touch-icon-57x57.png">
-	<link rel="shortcut icon" href="assets/images/favicons/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicons/apple-touch-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicons/apple-touch-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicons/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicons/apple-touch-icon-57x57.png' %}">
+	<link rel="shortcut icon" href="{% static 'images/favicons/favicon.png' %}" type="image/png">
 
 	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="assets/styles/style-rtl-demo.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/styles/style-rtl.css"/>
-	<link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style-rtl-demo.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/style-rtl.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'demo/style-demo.css' %}"/>
 
 </head>
 <body>
@@ -96,106 +96,18 @@
 					        <!-- Item 1 -->
 					        <figure class="gallery-grid__item category-concept">
 						        <div class="gallery-grid__image-wrap">
-                                    <img class="gallery-grid__image cover lazyload" src="assets/img/image_01.jpg" data-zoom alt="" />
+                                    <img class="gallery-grid__image cover lazyload" src="{% static 'img/image_01.jpg' %}" data-zoom alt="" />
 						        </div>
                                 <figcaption class="gallery-grid__caption">
 							        <h4 class="title title--h6 gallery-grid__title">نصف آووکادو</h4>
 							        <span class="gallery-grid__category">مفهوم</span>
 						        </figcaption>
                             </figure>
-
-					        <!-- Item 2 -->
-					        <figure class="gallery-grid__item category-concept">
-						        <div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_02.jpg" data-zoom alt="" />
-								</div>	
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">فلامینگو صورتی</h4>
-									<span class="gallery-grid__category">مفهوم</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 3 -->
-							<figure class="gallery-grid__item category-design">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_03.jpg" data-zoom alt="" />
-								</div>	
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">چکیده</h4>
-									<span class="gallery-grid__category">طراحی</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 4 -->
-							<figure class="gallery-grid__item category-design">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_04.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">چکیده #2</h4>
-									<span class="gallery-grid__category">طراحی</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 5 -->
-							<figure class="gallery-grid__item category-design">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_05.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">چکیده #3</h4>
-									<span class="gallery-grid__category">طراحی</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 6 -->
-							<figure class="gallery-grid__item category-life">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_06.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">دروازه طلایی</h4>
-									<span class="gallery-grid__category">زندگی</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 7 -->
-							<figure class="gallery-grid__item category-concept">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_07.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">هلو</h4>
-									<span class="gallery-grid__category">مفهوم</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 8 -->
-							<figure class="gallery-grid__item category-design">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_08.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">چکیده #4</h4>
-									<span class="gallery-grid__category">طراحی</span>
-								</figcaption>
-							</figure>
-
-							<!-- Item 9 -->
-							<figure class="gallery-grid__item category-life">
-								<div class="gallery-grid__image-wrap">
-									<img class="gallery-grid__image cover lazyload" src="assets/img/image_09.jpg" data-zoom alt="" />
-								</div>
-								<figcaption class="gallery-grid__caption">
-									<h4 class="title title--h6 gallery-grid__title">جوجه تیغی</h4>
-									<span class="gallery-grid__category">زندگی</span>
-								</figcaption>
-							</figure>
 						</div><!-- Gallery End -->
 					</div>
 					
 					<!-- Footer -->
-					<footer class="footer">© 1399 ملیکا خلیلیان</footer>
+					<footer class="footer">© 1402 امیرمهدی مشایخی</footer>
 		        </div>
 			</div>
 		</div>	
@@ -213,26 +125,12 @@
         </clipPath>		
     </svg>
     
-	<!-- Demo Menu -->
-	<div class="btnSlideNav slideOpen"></div>
-    <div class="btnSlideNav slideClose"></div>
-	<div class="slideNav">
-		<ul class="list-unstyled">
-			<li class="slideNav__item rtl-mode"><h4 class="title title--5">صفحات بیشتر</h4> <a href="ltr/about.html">نسخه چپ چین</a></li>
-			<li class="slideNav__item"><a href="one-page.html">صفحه تکی</a></li>
-			<li class="slideNav__item"><a href="background-2.html">پس زمینه مثلثی</a></li>
-			<li class="slideNav__item"><a href="works_v2.html">نمونه کارها نسخه 2</a></li>
-		</ul>
-		<a href="dark/about.html" class="btn btn--dark">نسخه تیره</a>
-	</div>
-	<div class="overlay-slideNav"></div>
-    <!-- Demo Menu -->
-	
+
 	<!-- JavaScripts -->
-	<script src="assets/js/jquery-3.4.1.min.js"></script>
-	<script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/common.js"></script>
+	<script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static '/js/plugins.min.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
     
-	<script src="assets/demo/plugins-demo.js"></script>
+	<script src="{% static '/demo/plugins-demo.js' %}"></script>
 </body>
 </html>
