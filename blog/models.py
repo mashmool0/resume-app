@@ -10,6 +10,8 @@ list_month = ['', 'فروردین', 'اردیبهشت', 'خرداد', 'تیر', 
 month = list_month[int(str(jdatetime.date.today()).split('-')[1])]
 day = str(jdatetime.date.today()).split('-')[2]
 
+
+
 class Blog_post(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
