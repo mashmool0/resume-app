@@ -83,7 +83,8 @@
 						<!-- Contact -->
 						<h2 class="title title--h3">فرم تماس</h2>
 							
-						<form id="contact-form" class="contact-form" data-toggle="validator">
+						<form action="{% url 'contact' %}" id="contact-form" class="contact-form" data-toggle="validator" method="post">
+							{% csrf_token %}
                             <div class="row">
 				                <div class="form-group col-12 col-md-6">
                                     <input type="text" class="form-control" id="nameContact" name="nameContact" placeholder="نام و نام خانوادگی" required="required" autocomplete="on" oninvalid="setCustomValidity('پر کردن این فیلد ضروری است.')" onkeyup="setCustomValidity('')">
